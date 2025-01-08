@@ -21,6 +21,7 @@ As an alternative to running Redis in the foreground, you can also use launchd t
 This launches Redis and restarts it at login.  
 
 `brew services start redis`  
+`brew services restart redis`  
 
 You can check the status of a launchd managed Redis by running the following:  
 
