@@ -54,3 +54,33 @@ https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/#instal
 
 ## Also see:  
 https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-windows/
+
+
+## Windows
+
+### Install WSL Ubunto
+`sudo apt update`  
+`sudo apt upgrade`  
+
+### Install redis-server in Ubuntu
+`sudo apt install redis-server`  
+
+### Start/Stop/Test
+`sudo service redis-server start`  
+`sudo service redis-server status`  
+`sudo service redis-server stop`  
+
+## Start worker
+The worker will monitor the redis queue and pull out jobs to process.
+`node worker.js`  
+
+### Test Worker
+In browser use the following URL:
+`https://localhost:4000/api/addqueue`  
+or
+`https://localhost/api/addqueue`  
+
+You should see this in the worker terminal
+`Processing job: 1 Hello, Queue!`  
+`Job 1 is active`  
+`Job ID 1 completed with result: { status: 1 }`  

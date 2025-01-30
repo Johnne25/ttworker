@@ -1,5 +1,7 @@
 const reportQueue = require('./queue');
 
+console.log('Creating worker...');
+
 // Process jobs from the queue
 reportQueue.process((job, done) => {
 	console.log('Processing job:', job.data.count, job.data.message);
